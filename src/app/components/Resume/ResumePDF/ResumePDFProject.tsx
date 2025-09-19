@@ -11,12 +11,10 @@ export const ResumePDFProject = ({
   heading,
   projects,
   themeColor,
-  isPreview = false,
 }: {
   heading: string;
   projects: ResumeProject[];
   themeColor: string;
-  isPreview?: boolean;
 }) => {
   if (projects.length === 0) {
     return null;
@@ -30,24 +28,20 @@ export const ResumePDFProject = ({
           project={project}
           themeColor={themeColor}
           isFirst={idx === 0}
-          isPreview={isPreview}
         />
       ))}
     </ResumePDFSection>
   );
 };
 
-
 const ProjectEntry = ({
   project,
   themeColor,
   isFirst,
-  isPreview,
 }: {
   project: ResumeProject;
   themeColor: string;
   isFirst: boolean;
-  isPreview: boolean;
 }) => {
   const {
     project: projectName,
@@ -66,7 +60,6 @@ const ProjectEntry = ({
             github={github}
             demo={demo}
             themeColor={themeColor}
-            isPreview={isPreview}
           />
         </View>
         <ResumePDFText>{date}</ResumePDFText>
@@ -82,12 +75,10 @@ const ProjectLinks = ({
   github,
   demo,
   themeColor,
-  isPreview,
 }: {
   github?: string;
   demo?: string;
   themeColor: string;
-  isPreview: boolean;
 }) => {
   if (!github && !demo) {
     return null;
@@ -110,27 +101,21 @@ const ProjectLinks = ({
         marginLeft: spacing["1"],
       }}
     >
-      {github &&
-        (isPreview ? (
+      {github && (
+        <Link src={ensureUrlHasProtocol(github)}>
           <Text style={linkStyle}>Github</Text>
-        ) : (
-          <Link src={ensureUrlHasProtocol(github)}>
-            <Text style={linkStyle}>Github</Text>
-          </Link>
-        ))}
+        </Link>
+      )}
 
       {github && demo && (
         <Text style={{ marginHorizontal: spacing["0.5"] }}></Text>
       )}
 
-      {demo &&
-        (isPreview ? (
+      {demo && (
+        <Link src={ensureUrlHasProtocol(demo)}>
           <Text style={linkStyle}>Demo</Text>
-        ) : (
-          <Link src={ensureUrlHasProtocol(demo)}>
-            <Text style={linkStyle}>Demo</Text>
-          </Link>
-        ))}
+        </Link>
+      )}
     </View>
   );
 };
