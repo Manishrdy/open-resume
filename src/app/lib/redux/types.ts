@@ -5,6 +5,8 @@ export interface ResumeProfile {
   url: string;
   summary: string;
   location: string;
+  portfolio: string;
+  github: string
 }
 
 export interface ResumeWorkExperience {
