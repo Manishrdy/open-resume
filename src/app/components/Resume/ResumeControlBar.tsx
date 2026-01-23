@@ -4,9 +4,12 @@ import { useSetDefaultScale } from "components/Resume/hooks";
 import {
   MagnifyingGlassIcon,
   ArrowDownTrayIcon,
+  TrashIcon,
 } from "@heroicons/react/24/outline";
 import { usePDF } from "@react-pdf/renderer";
 import dynamic from "next/dynamic";
+import { useAppDispatch } from "lib/redux/hooks";
+import { setResume, initialResumeState } from "lib/redux/resumeSlice";
 
 const ResumeControlBar = ({
   scale,
@@ -27,6 +30,7 @@ const ResumeControlBar = ({
   });
 
   const [instance, update] = usePDF({ document });
+  const dispatch = useAppDispatch();
 
   // Hook to update pdf when document changes
   useEffect(() => {
@@ -59,14 +63,27 @@ const ResumeControlBar = ({
           <span className="select-none">Autoscale</span>
         </label>
       </div>
-      <a
-        className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 px-3 py-0.5 hover:bg-gray-100 lg:ml-8"
-        href={instance.url!}
-        download={fileName}
-      >
-        <ArrowDownTrayIcon className="h-4 w-4" />
-        <span className="whitespace-nowrap">Download Resume</span>
-      </a>
+      <div className="flex items-center gap-2">
+        <a
+          className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 px-3 py-0.5 hover:bg-gray-100 lg:ml-8"
+          href={instance.url!}
+          download={fileName}
+        >
+          <ArrowDownTrayIcon className="h-4 w-4" />
+          <span className="whitespace-nowrap">Download Resume</span>
+        </a>
+        <button
+          className="flex items-center gap-1 rounded-md border border-red-500 bg-red-500 px-3 py-0.5 text-white hover:bg-red-600 hover:text-white"
+          onClick={() => {
+            if (confirm("Are you sure you want to clear all data?")) {
+              dispatch(setResume(initialResumeState));
+            }
+          }}
+        >
+          <TrashIcon className="h-4 w-4" />
+          <span className="whitespace-nowrap">Clear</span>
+        </button>
+      </div>
     </div>
   );
 };

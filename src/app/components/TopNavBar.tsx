@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch } from "lib/redux/hooks";
 import { setResume } from "lib/redux/resumeSlice";
 import { setSettings } from "lib/redux/settingsSlice";
+import { AutoSaveIndicator } from "./AutoSaveIndicator";
 
 export const TopNavBar = () => {
   const pathName = usePathname();
@@ -95,6 +96,7 @@ export const TopNavBar = () => {
           aria-label="Site Nav Bar"
           className="flex items-center gap-2 text-sm font-medium"
         >
+          <AutoSaveIndicator />
           {[
             ["/resume-builder", "Builder"],
             ["/resume-parser", "Parser"],
