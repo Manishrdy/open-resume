@@ -1,0 +1,111 @@
+{
+    "profile": {
+        "name": "Jane Developer",
+        "email": "jane.doe@example.com",
+        "phone": "(555) 123-4567",
+        "location": "San Francisco, CA",
+        "website": "janedoe.com",
+        "linkedin": "linkedin.com/in/janedoe",
+        "github": "github.com/janedoe",
+        "summary": "Senior Full Stack Engineer with 7+ years of experience building scalable web applications. Expert in React, Node.js, and Cloud Infrastructure. Passionate about code quality and developer productivity."
+    },
+    "workExperiences": [
+        {
+            "company": "Tech Giants Inc.",
+            "jobTitle": "Senior Software Engineer",
+            "date": "2021 - Present",
+            "descriptions": [
+                "Architected and led the migration of a legacy monolith to a microservices architecture, reducing deployment time by 40%.",
+                "Mentored 5 junior engineers and established best practices for code reviews and testing.",
+                "Optimized database queries decreasing average API response time from 300ms to 50ms."
+            ]
+        },
+        {
+            "company": "Startup Hub",
+            "jobTitle": "Full Stack Developer",
+            "date": "2018 - 2021",
+            "descriptions": [
+                "Developed key features for the main product dashboard using React and TypeScript.",
+                "Integrated Stripe for payments processing, handling over $1M in monthly transactions.",
+                "Implemented CI/CD pipelines using GitHub Actions, enabling daily production releases."
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "school": "University of Technology",
+            "degree": "B.S. Computer Science",
+            "date": "2014 - 2018",
+            "gpa": "3.8",
+            "descriptions": [
+                "Specialized in Distributed Systems and Artificial Intelligence.",
+                "President of the Computer Science Society."
+            ]
+        },
+        {
+            "school": "University of Technology",
+            "degree": "M.S. Computer Science",
+            "date": "2023 - 2025",
+            "gpa": "3.8",
+            "descriptions": [
+                "Specialized in Distributed Systems and Artificial Intelligence.",
+                "President of the Computer Science Society."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "project": "Open Resume Builder",
+            "date": "2023",
+            "githubUrl": "github.com/janedoe/open-resume",
+            "descriptions": [
+                "An open-source resume builder with real-time PDF preview.",
+                "Built with Next.js, Redux, and Tailwind CSS.",
+                "Featured on Product Hunt and gained 500+ stars on GitHub."
+            ]
+        },
+        {
+            "project": "Task Master API",
+            "date": "2022",
+            "githubUrl": "github.com/janedoe/task-master",
+            "descriptions": [
+                "A high-performance task management API built with Go and Redis.",
+                "Supports real-time updates via WebSockets.",
+                "Deployed on AWS Lambda using Terraform."
+            ]
+        }
+    ],
+    "skills": {
+        "Programming Languages": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "Python",
+            "Go",
+            "Java"
+        ],
+        "Frontend": [
+            "React",
+            "Next.js",
+            "Redux",
+            "Tailwind CSS",
+            "HTML5/CSS3"
+        ],
+        "Backend": [
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "MongoDB",
+            "Redis"
+        ],
+        "DevOps & Tools": [
+            "Git",
+            "Docker",
+            "AWS",
+            "CI/CD",
+            "Jest"
+        ]
+    },
+    "custom": {
+        "descriptions": []
+    }
+}

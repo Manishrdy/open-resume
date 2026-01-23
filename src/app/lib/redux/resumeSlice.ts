@@ -17,7 +17,9 @@ export const initialProfile: ResumeProfile = {
   email: "",
   phone: "",
   location: "",
-  url: "",
+  github: "",
+  linkedin: "",
+  website: "",
 };
 
 export const initialWorkExperience: ResumeWorkExperience = {
@@ -39,6 +41,7 @@ export const initialProject: ResumeProject = {
   project: "",
   date: "",
   descriptions: [],
+  githubUrl: "",
 };
 
 export const initialFeaturedSkill: FeaturedSkill = { skill: "", rating: 4 };
@@ -67,12 +70,12 @@ export const initialResumeState: Resume = {
 export type CreateChangeActionWithDescriptions<T> = {
   idx: number;
 } & (
-  | {
+    | {
       field: Exclude<keyof T, "descriptions">;
       value: string;
     }
-  | { field: "descriptions"; value: string[] }
-);
+    | { field: "descriptions"; value: string[] }
+  );
 
 export const resumeSlice = createSlice({
   name: "resume",
@@ -116,11 +119,11 @@ export const resumeSlice = createSlice({
       action: PayloadAction<
         | { field: "descriptions"; value: string[] }
         | {
-            field: "featuredSkills";
-            idx: number;
-            skill: string;
-            rating: number;
-          }
+          field: "featuredSkills";
+          idx: number;
+          skill: string;
+          rating: number;
+        }
       >
     ) => {
       const { field } = action.payload;

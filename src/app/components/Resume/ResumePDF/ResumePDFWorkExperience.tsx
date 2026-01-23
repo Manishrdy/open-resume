@@ -33,7 +33,7 @@ export const ResumePDFWorkExperience = ({
                 ...styles.flexRowBetween,
                 marginTop: hideCompanyName
                   ? "-" + spacing["1"]
-                  : spacing["1.5"],
+                  : spacing[0],
               }}
             >
               <ResumePDFText>{jobTitle}</ResumePDFText>

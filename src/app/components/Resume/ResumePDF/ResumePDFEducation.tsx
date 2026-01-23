@@ -37,14 +37,13 @@ export const ResumePDFEducation = ({
                   ...styles.flexRowBetween,
                   marginTop: hideSchoolName
                     ? "-" + spacing["1"]
-                    : spacing["1.5"],
+                    : spacing[0],
                 }}
               >
-                <ResumePDFText>{`${
-                  gpa
-                    ? `${degree} - ${Number(gpa) ? gpa + " GPA" : gpa}`
-                    : degree
-                }`}</ResumePDFText>
+                <ResumePDFText>{`${gpa
+                  ? `${degree} - ${Number(gpa) ? gpa + " GPA" : gpa}`
+                  : degree
+                  }`}</ResumePDFText>
                 <ResumePDFText>{date}</ResumePDFText>
               </View>
               {showDescriptions && (

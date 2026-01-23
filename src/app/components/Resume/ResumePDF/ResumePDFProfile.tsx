@@ -20,8 +20,9 @@ export const ResumePDFProfile = ({
   themeColor: string;
   isPDF: boolean;
 }) => {
-  const { name, email, phone, url, summary, location } = profile;
-  const iconProps = { email, phone, location, url };
+  const { name, email, phone, website, linkedin, github, summary, location } =
+    profile;
+  const iconProps = { email, phone, location, github, linkedin, website };
 
   return (
     <ResumePDFSection style={{ marginTop: spacing["4"] }}>
@@ -32,11 +33,14 @@ export const ResumePDFProfile = ({
       >
         {name}
       </ResumePDFText>
-      {summary && <ResumePDFText>{summary}</ResumePDFText>}
+      {summary && (
+        <ResumePDFText style={{ textAlign: "justify" }}>{summary}</ResumePDFText>
+      )}
+
       <View
         style={{
           ...styles.flexRowBetween,
-          flexWrap: "wrap",
+          flexWrap: "nowrap",
           marginTop: spacing["0.5"],
         }}
       >
@@ -44,15 +48,21 @@ export const ResumePDFProfile = ({
           if (!value) return null;
 
           let iconType = key as IconType;
-          if (key === "url") {
-            if (value.includes("github")) {
-              iconType = "url_github";
-            } else if (value.includes("linkedin")) {
-              iconType = "url_linkedin";
-            }
+          if (key === "website") {
+            iconType = "url";
+          } else if (key === "github") {
+            iconType = "url_github";
+          } else if (key === "linkedin") {
+            iconType = "url_linkedin";
           }
 
-          const shouldUseLinkWrapper = ["email", "url", "phone"].includes(key);
+          const shouldUseLinkWrapper = [
+            "email",
+            "website",
+            "phone",
+            "linkedin",
+            "github",
+          ].includes(key);
           const Wrapper = ({ children }: { children: React.ReactNode }) => {
             if (!shouldUseLinkWrapper) return <>{children}</>;
 
@@ -84,12 +94,14 @@ export const ResumePDFProfile = ({
               style={{
                 ...styles.flexRow,
                 alignItems: "center",
-                gap: spacing["1"],
+                gap: spacing["0.5"],
               }}
             >
               <ResumePDFIcon type={iconType} isPDF={isPDF} />
               <Wrapper>
-                <ResumePDFText>{value}</ResumePDFText>
+                <ResumePDFText style={{ fontSize: "8pt" }}>
+                  {value}
+                </ResumePDFText>
               </Wrapper>
             </View>
           );

@@ -72,6 +72,7 @@ export const ResumePDF = ({
         heading={formToHeading["projects"]}
         projects={projects}
         themeColor={themeColor}
+        isPDF={isPDF}
       />
     ),
     skills: () => (
@@ -92,45 +93,74 @@ export const ResumePDF = ({
     ),
   };
 
+  const resumeContent = (
+    <View
+      style={{
+        ...styles.flexCol,
+        color: DEFAULT_FONT_COLOR,
+        fontFamily,
+        fontSize: fontSize + "pt",
+      }}
+    >
+      {Boolean(settings.themeColor) && (
+        <View
+          style={{
+            width: spacing["full"],
+            height: spacing[3.5],
+            backgroundColor: themeColor,
+          }}
+        />
+      )}
+      <View
+        style={{
+          ...styles.flexCol,
+          padding: `${spacing[0]} ${spacing[5]}`,
+          paddingBottom: spacing[20],
+        }}
+      >
+        <ResumePDFProfile
+          profile={profile}
+          themeColor={themeColor}
+          isPDF={isPDF}
+        />
+        {showFormsOrder.map((form) => {
+          const Component = formTypeToComponent[form];
+          return <Component key={form} />;
+        })}
+      </View>
+    </View>
+  );
+
   return (
     <>
-      <Document title={`${name} Resume`} author={name} producer={"OpenResume"}>
-        <Page
-          size={documentSize === "A4" ? "A4" : "LETTER"}
-          style={{
-            ...styles.flexCol,
-            color: DEFAULT_FONT_COLOR,
-            fontFamily,
-            fontSize: fontSize + "pt",
-          }}
+      {isPDF ? (
+        <Document
+          title={`${name} Resume`}
+          author={name}
+          producer={"OpenResume"}
         >
-          {Boolean(settings.themeColor) && (
-            <View
-              style={{
-                width: spacing["full"],
-                height: spacing[3.5],
-                backgroundColor: themeColor,
-              }}
-            />
-          )}
-          <View
+          <Page
+            size={documentSize === "A4" ? "A4" : "LETTER"}
             style={{
               ...styles.flexCol,
-              padding: `${spacing[0]} ${spacing[20]}`,
+              color: DEFAULT_FONT_COLOR,
+              fontFamily,
+              fontSize: fontSize + "pt",
             }}
           >
-            <ResumePDFProfile
-              profile={profile}
-              themeColor={themeColor}
-              isPDF={isPDF}
-            />
-            {showFormsOrder.map((form) => {
-              const Component = formTypeToComponent[form];
-              return <Component key={form} />;
-            })}
-          </View>
-        </Page>
-      </Document>
+            {resumeContent}
+          </Page>
+        </Document>
+      ) : (
+        <View
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {resumeContent}
+        </View>
+      )}
       <SuppressResumePDFErrorMessage />
     </>
   );

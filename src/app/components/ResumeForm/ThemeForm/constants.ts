@@ -11,4 +11,16 @@ export const THEME_COLORS = [
   "#0ea5e9", // Sky-500
   "#818cf8", // Indigo-400
   "#6366f1", // Indigo-500
+  "#000000", // Pure Black
+  "#1f2937", // Dark Gray
+  "#374151", // Charcoal
+  "#1e3a8a", // Navy Blue
+  "#172554", // Midnight Blue
+  "#334155", // Slate
+  "#14532d", // Forest Green
+  "#134e4a", // Dark Teal
+  "#7f1d1d", // Maroon
+  "#312e81", // Dark Indigo
+  "#581c87", // Deep Purple
+  "#78350f", // Dark Brown
 ];

@@ -8,6 +8,8 @@ export const metadata = {
     "OpenResume is a free, open-source, and powerful resume builder that allows anyone to create a modern professional resume in 3 simple steps. For those who have an existing resume, OpenResume also provides a resume parser to help test and confirm its ATS readability.",
 };
 
+import { Providers } from "./Providers";
+
 export default function RootLayout({
   children,
 }: {
@@ -16,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNavBar />
-        {children}
-        <Analytics />
+        <Providers>
+          <TopNavBar />
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
