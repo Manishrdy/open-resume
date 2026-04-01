@@ -62,7 +62,7 @@ export default function ResumeParser() {
           </section>
           <FlexboxSpacer maxWidth={45} className="hidden md:block" />
         </div>
-        <div className="flex px-6 text-gray-900 md:col-span-3 md:h-[calc(100vh-var(--top-nav-bar-height))] md:overflow-y-scroll">
+        <div className="flex px-6 text-gray-900 dark:text-dark-fg md:col-span-3 md:h-[calc(100vh-var(--top-nav-bar-height))] md:overflow-y-scroll">
           <FlexboxSpacer maxWidth={45} className="hidden md:block" />
           <section className="max-w-[600px] grow">
             <Heading className="text-primary !mt-4">
@@ -78,10 +78,10 @@ export default function ResumeParser() {
                 <article
                   key={idx}
                   className={cx(
-                    "flex-1 cursor-pointer rounded-md border-2 px-4 py-3 shadow-sm outline-none hover:bg-gray-50 focus:bg-gray-50",
+                    "flex-1 cursor-pointer rounded-md border-2 px-4 py-3 shadow-sm outline-none hover:bg-gray-50 dark:hover:bg-dark-bg-tertiary focus:bg-gray-50 dark:focus:bg-dark-bg-tertiary",
                     example.fileUrl === fileUrl
-                      ? "border-blue-400"
-                      : "border-gray-300"
+                      ? "border-blue-400 dark:border-blue-500"
+                      : "border-gray-300 dark:border-dark-border"
                   )}
                   onClick={() => setFileUrl(example.fileUrl)}
                   onKeyDown={(e) => {
@@ -90,8 +90,8 @@ export default function ResumeParser() {
                   }}
                   tabIndex={0}
                 >
-                  <h1 className="font-semibold">Resume Example {idx + 1}</h1>
-                  <p className="mt-2 text-sm text-gray-500">
+                  <h1 className="font-semibold dark:text-dark-fg">Resume Example {idx + 1}</h1>
+                  <p className="mt-2 text-sm text-gray-500 dark:text-dark-fg-muted">
                     {example.description}
                   </p>
                 </article>

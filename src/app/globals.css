@@ -7,28 +7,66 @@
   .btn-primary {
     @apply bg-primary outline-theme-purple inline-block rounded-full px-6 py-2 font-semibold shadow-sm;
   }
+
   .text-primary {
     @apply bg-gradient-to-r from-[color:var(--theme-purple)] to-[color:var(--theme-blue)] bg-clip-text text-transparent !important;
   }
+
   .bg-primary {
     @apply bg-gradient-to-r from-[color:var(--theme-purple)] to-[color:var(--theme-blue)] text-white;
   }
+
   .outline-theme-purple {
     @apply hover:opacity-80 hover:outline-[color:var(--theme-purple)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--theme-purple)];
   }
+
   .outline-theme-blue {
     @apply hover:opacity-80 hover:outline-[color:var(--theme-blue)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--theme-blue)];
   }
+
   .within-outline-theme-purple {
     @apply focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[color:var(--theme-purple)] hover:opacity-80 hover:outline-[color:var(--theme-purple)];
   }
 }
 
 :root {
+  /* Brand colors - light mode */
   --theme-purple: #5d52d9;
   --theme-blue: #4fc5eb;
+
   /* Keep the below variable names in sync with CSS_VARIABLES in globals-css.ts */
   --top-nav-bar-height: 3.5rem;
   --resume-control-bar-height: 3rem;
   --resume-padding: 1.5rem;
+
+  /* Light theme colors */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
+  --color-fg: #111827;
+  --color-fg-muted: #6b7280;
+  --color-fg-subtle: #9ca3af;
+  --color-border: #e5e7eb;
+  --color-border-subtle: #f3f4f6;
+}
+
+.dark {
+  /* Brand colors - brighter for dark mode */
+  --theme-purple: #7c72e8;
+  --theme-blue: #5fd4f5;
+
+  /* Professional Dark theme - Warm, modern, high contrast */
+  --color-bg: #1a1a1a;
+  --color-bg-secondary: #242424;
+  --color-bg-tertiary: #2d2d2d;
+  --color-fg: #e8e8e8;
+  --color-fg-muted: #a0a0a0;
+  --color-fg-subtle: #6b6b6b;
+  --color-border: #3a3a3a;
+  --color-border-subtle: #2d2d2d;
+}
+
+/* Smooth transition for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

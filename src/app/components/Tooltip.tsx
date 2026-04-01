@@ -58,7 +58,7 @@ export const Tooltip = ({
           <div
             ref={tooltipRef}
             role="tooltip"
-            className="absolute left-0 top-0 z-10 w-max rounded-md bg-gray-600 px-2 py-0.5 text-sm text-white"
+            className="absolute left-0 top-0 z-10 w-max rounded-md bg-gray-700 dark:bg-dark-bg-tertiary px-2 py-0.5 text-sm text-white dark:text-dark-fg border dark:border-dark-border"
             style={{
               left: `${tooltipPos.left}px`,
               top: `${tooltipPos.top}px`,

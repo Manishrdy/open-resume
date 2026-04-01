@@ -38,7 +38,7 @@ const ResumeControlBar = ({
   }, [update, document]);
 
   return (
-    <div className="sticky bottom-0 left-0 right-0 flex h-[var(--resume-control-bar-height)] items-center justify-center px-[var(--resume-padding)] text-gray-600 lg:justify-between">
+    <div className="sticky bottom-0 left-0 right-0 flex h-[var(--resume-control-bar-height)] items-center justify-center px-[var(--resume-padding)] text-gray-600 dark:text-dark-fg-muted lg:justify-between bg-white dark:bg-dark-bg-secondary">
       <div className="flex items-center gap-2">
         <MagnifyingGlassIcon className="h-5 w-5" aria-hidden="true" />
         <input
@@ -65,7 +65,7 @@ const ResumeControlBar = ({
       </div>
       <div className="flex items-center gap-2">
         <a
-          className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 px-3 py-0.5 hover:bg-gray-100 lg:ml-8"
+          className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 dark:border-dark-border px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-dark-bg-tertiary lg:ml-8"
           href={instance.url!}
           download={fileName}
         >
@@ -99,5 +99,5 @@ export const ResumeControlBarCSR = dynamic(
 );
 
 export const ResumeControlBarBorder = () => (
-  <div className="absolute bottom-[var(--resume-control-bar-height)] w-full border-t-2 bg-gray-50" />
+  <div className="absolute bottom-[var(--resume-control-bar-height)] w-full border-t-2 border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-bg" />
 );

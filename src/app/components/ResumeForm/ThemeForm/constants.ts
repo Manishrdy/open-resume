@@ -23,4 +23,16 @@ export const THEME_COLORS = [
   "#312e81", // Dark Indigo
   "#581c87", // Deep Purple
   "#78350f", // Dark Brown
+  "#f472b6", // Pink-400
+  "#ec4899", // Pink-500
+  "#e879f9", // Fuchsia-400
+  "#d946ef", // Fuchsia-500
+  "#22d3ee", // Cyan-400
+  "#06b6d4", // Cyan-500
+  "#2dd4bf", // Teal-400
+  "#14b8a6", // Teal-500
+  "#a3e635", // Lime-400
+  "#84cc16", // Lime-500
+  "#facc15", // Yellow-400
+  "#eab308", // Yellow-500
 ];

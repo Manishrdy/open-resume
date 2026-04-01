@@ -34,8 +34,8 @@ export const ResumeForm = () => {
   return (
     <div
       className={cx(
-        "flex justify-center scrollbar-thin scrollbar-track-gray-100 md:h-[calc(100vh-var(--top-nav-bar-height))] md:justify-end md:overflow-y-scroll",
-        isHover ? "scrollbar-thumb-gray-200" : "scrollbar-thumb-gray-100"
+        "flex justify-center scrollbar-thin scrollbar-track-gray-100 dark:scrollbar-track-dark-bg-secondary md:h-[calc(100vh-var(--top-nav-bar-height))] md:justify-end md:overflow-y-scroll",
+        isHover ? "scrollbar-thumb-gray-200 dark:scrollbar-thumb-dark-bg-tertiary" : "scrollbar-thumb-gray-100 dark:scrollbar-thumb-dark-bg"
       )}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}

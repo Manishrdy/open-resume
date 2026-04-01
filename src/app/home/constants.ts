@@ -15,7 +15,9 @@ export const END_HOME_RESUME: Resume = {
     email: "hello@openresume.com",
     phone: "123-456-7890",
     location: "NYC, NY",
-    url: "linkedin.com/in/john-doe",
+    website: "johndoe.dev",
+    linkedin: "linkedin.com/in/john-doe",
+    github: "github.com/john-doe",
   },
   workExperiences: [
     {
@@ -65,6 +67,7 @@ export const END_HOME_RESUME: Resume = {
     {
       project: "OpenResume",
       date: "Spring 2023",
+      githubUrl: "github.com/sponsors/xitanggg",
       descriptions: [
         "Created and launched a free resume builder web app that allows thousands of users to create professional resume easily and land their dream jobs",
       ],

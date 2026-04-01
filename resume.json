@@ -1,111 +1,105 @@
 {
-    "profile": {
-        "name": "Jane Developer",
-        "email": "jane.doe@example.com",
-        "phone": "(555) 123-4567",
-        "location": "San Francisco, CA",
-        "website": "janedoe.com",
-        "linkedin": "linkedin.com/in/janedoe",
-        "github": "github.com/janedoe",
-        "summary": "Senior Full Stack Engineer with 7+ years of experience building scalable web applications. Expert in React, Node.js, and Cloud Infrastructure. Passionate about code quality and developer productivity."
+  "profile": {
+    "name": "Manish R Botta",
+    "email": "mabotta12@gmail.com",
+    "phone": "909-449-2624",
+    "location": "Los Angeles, CA",
+    "website": "manishbotta.me",
+    "linkedin": "linkedin.com/in/manish-reddyb",
+    "github": "github.com/manishrdy",
+    "summary": "Backend Engineer with 3+ years shipping distributed systems, data pipelines, and high-throughput APIs at production scale. Comfortable owning the full problem — from schema design to cloud deployment. Proven ability to move fast and stay reliable: Kafka pipelines at 100M+ events/day, 40% API latency cuts, and 3x release cycle improvements across fast-moving teams."
+  },
+  "workExperiences": [
+    {
+      "company": "Microsoft",
+      "jobTitle": "Software Engineer (Contract)",
+      "date": "Aug 2025 -- Present",
+      "descriptions": [
+        "Owned end-to-end Python data pipelines extracting, transforming, and loading structured data from internal systems into a centralized SQL store — improving downstream reporting availability by 60% with no prior pipeline infrastructure.",
+        "Automated manual data workflows using Python scripting and REST API integrations, cutting processing time by 70% and freeing the team from repetitive overhead.",
+        "Shipped containerized backend services via GitHub Actions CI/CD on Azure, achieving zero-downtime releases and cutting cross-team integration defects by 40%."
+      ]
     },
-    "workExperiences": [
-        {
-            "company": "Tech Giants Inc.",
-            "jobTitle": "Senior Software Engineer",
-            "date": "2021 - Present",
-            "descriptions": [
-                "Architected and led the migration of a legacy monolith to a microservices architecture, reducing deployment time by 40%.",
-                "Mentored 5 junior engineers and established best practices for code reviews and testing.",
-                "Optimized database queries decreasing average API response time from 300ms to 50ms."
-            ]
-        },
-        {
-            "company": "Startup Hub",
-            "jobTitle": "Full Stack Developer",
-            "date": "2018 - 2021",
-            "descriptions": [
-                "Developed key features for the main product dashboard using React and TypeScript.",
-                "Integrated Stripe for payments processing, handling over $1M in monthly transactions.",
-                "Implemented CI/CD pipelines using GitHub Actions, enabling daily production releases."
-            ]
-        }
-    ],
-    "educations": [
-        {
-            "school": "University of Technology",
-            "degree": "B.S. Computer Science",
-            "date": "2014 - 2018",
-            "gpa": "3.8",
-            "descriptions": [
-                "Specialized in Distributed Systems and Artificial Intelligence.",
-                "President of the Computer Science Society."
-            ]
-        },
-        {
-            "school": "University of Technology",
-            "degree": "M.S. Computer Science",
-            "date": "2023 - 2025",
-            "gpa": "3.8",
-            "descriptions": [
-                "Specialized in Distributed Systems and Artificial Intelligence.",
-                "President of the Computer Science Society."
-            ]
-        }
-    ],
-    "projects": [
-        {
-            "project": "Open Resume Builder",
-            "date": "2023",
-            "githubUrl": "github.com/janedoe/open-resume",
-            "descriptions": [
-                "An open-source resume builder with real-time PDF preview.",
-                "Built with Next.js, Redux, and Tailwind CSS.",
-                "Featured on Product Hunt and gained 500+ stars on GitHub."
-            ]
-        },
-        {
-            "project": "Task Master API",
-            "date": "2022",
-            "githubUrl": "github.com/janedoe/task-master",
-            "descriptions": [
-                "A high-performance task management API built with Go and Redis.",
-                "Supports real-time updates via WebSockets.",
-                "Deployed on AWS Lambda using Terraform."
-            ]
-        }
-    ],
-    "skills": {
-        "Programming Languages": [
-            "JavaScript (ES6+)",
-            "TypeScript",
-            "Python",
-            "Go",
-            "Java"
-        ],
-        "Frontend": [
-            "React",
-            "Next.js",
-            "Redux",
-            "Tailwind CSS",
-            "HTML5/CSS3"
-        ],
-        "Backend": [
-            "Node.js",
-            "Express",
-            "PostgreSQL",
-            "MongoDB",
-            "Redis"
-        ],
-        "DevOps & Tools": [
-            "Git",
-            "Docker",
-            "AWS",
-            "CI/CD",
-            "Jest"
-        ]
+    {
+      "company": "Yellow.AI",
+      "jobTitle": "Software Engineer",
+      "date": "Sep 2021 -- Jul 2023",
+      "descriptions": [
+        "Took full ownership of Kafka-based event-driven microservices in Node.js and Python, processing 100M+ events/day across distributed infrastructure at 99.9% uptime.",
+        "Cut API response time by 40% by overhauling MySQL/MongoDB query plans, adding strategic indexes, and introducing Redis caching for hot-path data.",
+        "Built data ingestion pipelines aggregating structured and semi-structured data from 50+ enterprise client systems into unified backend stores for analytics.",
+        "Deployed Dockerized services on AWS with automated CI/CD, driving 3x faster release cycles while holding 99.9% availability for 50+ enterprise clients."
+      ]
     },
-    "custom": {
-        "descriptions": []
+    {
+      "company": "Cognizant",
+      "jobTitle": "Program Trainee Analyst",
+      "date": "Mar 2021 -- Aug 2021",
+      "descriptions": [
+        "Broke apart a legacy monolith into independently deployable microservices, improving team velocity by 30% and unblocking parallel feature development.",
+        "Built RESTful APIs in Java Spring Boot with optimized SQL data access layers, cutting query response time by 40% with 80%+ test coverage via TDD."
+      ]
+    },
+    {
+      "company": "Achiwer",
+      "jobTitle": "Software Engineer Intern",
+      "date": "Apr 2019 -- Mar 2020",
+      "descriptions": [
+        "Built auth, payments, and content-delivery REST APIs in Node.js and Python for a learning marketplace serving 1,000+ users; cut AWS infra costs 25% via S3 lifecycle policies and EC2 rightsizing."
+      ]
     }
+  ],
+  "educations": [
+    {
+      "school": "California State University, San Bernardino",
+      "degree": "Masters in Computer Science",
+      "date": "Aug 2023 -- May 2025",
+      "descriptions": []
+    },
+    {
+      "school": "Amrita Vishwa Vidyapeetham, India",
+      "degree": "Bachelors in Computer Science",
+      "date": "Jul 2017 -- May 2021",
+      "descriptions": []
+    }
+  ],
+  "projects": [
+    {
+      "project": "Async Audio Pipeline",
+      "date": "Nov -- Dec 2025",
+      "githubUrl": "github.com/Manishrdy/async-audio-pipeline",
+      "descriptions": [
+        "Replaced a synchronous bottleneck with a distributed multi-stage pipeline (FastAPI + Redis queues) for ingestion, transcription, and summarization — 3x throughput gain with fault-tolerant idempotent retries.",
+        "Reduced manual review time by 80% via structured entity extraction and speaker segmentation."
+      ]
+    },
+    {
+      "project": "High-Performance URL Shortener",
+      "date": "Apr -- Jul 2025",
+      "githubUrl": "github.com/Manishrdy/url_shortener",
+      "descriptions": [
+        "Built a high-throughput service with Node.js, MongoDB, Redis, and Docker on AWS; cut DB reads by 70% and redirect latency by 60% via smart cache invalidation and JWT auth with zero-downtime deployment."
+      ]
+    },
+    {
+      "project": "OpenResume — Open Source",
+      "date": "Dec 2025 -- Present",
+      "githubUrl": "github.com/Manishrdy/open-resume",
+      "descriptions": [
+        "Contributed project-links feature across Next.js 13, TypeScript, and Redux Toolkit, enabling GitHub/demo URL embedding with 100% valid hyperlink rendering in exported PDFs."
+      ]
+    }
+  ],
+  "skills": {
+    "Languages": ["Python", "SQL", "Node.js", "Java"],
+    "Frameworks": ["FastAPI", "Flask", "Django", "Express.js", "Spring Boot"],
+    "APIs & Protocols": ["REST", "GraphQL", "gRPC", "OAuth 2.0", "SSO"],
+    "Databases & Caching": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    "Data & Pipelines": ["Apache Kafka", "ETL Pipelines", "Redis Queues", "Data Ingestion", "Schema Design"],
+    "Cloud & DevOps": ["AWS (EC2, S3, CloudWatch)", "Docker", "GitHub Actions", "Jenkins"],
+    "Core Competencies": ["Distributed Systems", "Microservices", "API Design", "Query Optimization", "Performance Tuning", "Data Reliability"]
+  },
+  "custom": {
+    "descriptions": []
+  }
 }

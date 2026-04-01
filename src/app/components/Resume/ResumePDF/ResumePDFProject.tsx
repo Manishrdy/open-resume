@@ -33,7 +33,7 @@ export const ResumePDFProject = ({
             <ResumePDFText>{date}</ResumePDFText>
           </View>
           {githubUrl && (
-            <View style={{ ...styles.flexRow, marginTop: spacing["0.5"] }}>
+            <View style={{ ...styles.flexRow, marginTop: spacing[0] }}>
               <ResumePDFLink
                 src={
                   githubUrl.startsWith("http")

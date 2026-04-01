@@ -64,7 +64,9 @@ export const ResumeTable = ({ resume }: { resume: Resume }) => {
         <TableRow label="Email" value={resume.profile.email} />
         <TableRow label="Phone" value={resume.profile.phone} />
         <TableRow label="Location" value={resume.profile.location} />
-        <TableRow label="Link" value={resume.profile.url} />
+        <TableRow label="Website" value={resume.profile.website} />
+        <TableRow label="LinkedIn" value={resume.profile.linkedin} />
+        <TableRow label="GitHub" value={resume.profile.github} />
         <TableRow label="Summary" value={resume.profile.summary} />
         <TableRowHeader>Education</TableRowHeader>
         {educations.map((education, idx) => (

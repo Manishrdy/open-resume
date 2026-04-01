@@ -1,12 +1,19 @@
-// Getting pdfjs to work is tricky. The following 3 lines would make it work
-// https://stackoverflow.com/a/63486898/7699841
-import * as pdfjs from "pdfjs-dist";
-// @ts-ignore
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-
+type Pdfjs = typeof import("pdfjs-dist");
 import type { TextItem as PdfjsTextItem } from "pdfjs-dist/types/src/display/api";
 import type { TextItem, TextItems } from "lib/parse-resume-from-pdf/types";
+
+let pdfjsPromise: Promise<Pdfjs> | undefined;
+
+const getPdfjs = async () => {
+  if (!pdfjsPromise) {
+    pdfjsPromise = import("pdfjs-dist").then((pdfjs) => {
+      pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.mjs`;
+      return pdfjs;
+    });
+  }
+
+  return pdfjsPromise;
+};
 
 /**
  * Step 1: Read pdf and output textItems by concatenating results from each page.
@@ -22,6 +29,7 @@ import type { TextItem, TextItems } from "lib/parse-resume-from-pdf/types";
  * }
  */
 export const readPdf = async (fileUrl: string): Promise<TextItems> => {
+  const pdfjs = await getPdfjs();
   const pdfFile = await pdfjs.getDocument(fileUrl).promise;
   let textItems: TextItems = [];
 

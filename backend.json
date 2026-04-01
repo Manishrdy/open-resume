@@ -1,0 +1,149 @@
+{
+    "profile": {
+        "name": "Manish Reddy",
+        "email": "mabotta12@gmail.com",
+        "phone": "909-449-2624",
+        "location": "Los Angeles, CA",
+        "website": "manishbotta.me",
+        "linkedin": "linkedin.com/in/manish-reddyb/",
+        "github": "github.com/manishrdy/",
+        "summary": "Backend Engineer with 3+ years of experience building production-grade APIs and microservices using Python and Node.js. Skilled in designing scalable microservices with FastAPI, Flask, and Express.js, and integrating backend systems with Generative AI applications. Experienced in optimizing databases with MySQL, MongoDB, and Redis, and deploying containerized services on AWS. Proven track record of reducing API latency by 40% and delivering reliable enterprise-scale solutions."
+    },
+    "workExperiences": [
+        {
+            "company": "Navi Technologies",
+            "jobTitle": "Contract - Software Engineer",
+            "date": "Aug 2025 - Present",
+            "descriptions": [
+                "Built secure Python microservices integrating HubSpot via OAuth 2.0, enabling real-time CRM sync and reducing manual data handling by 70%.",
+                "Designed scalable data ingestion pipelines for CRM objects, improving downstream data availability by 60%.",
+                "Deployed containerized services with CI/CD pipelines, reducing integration defects by 40% through clean API contracts."
+            ]
+        },
+        {
+            "company": "Yellow.Ai",
+            "jobTitle": "Software Engineer",
+            "date": "Sep 2021 - Jul 2023",
+            "descriptions": [
+                "Designed and scaled event-driven backend microservices using Node.js, Python, Kafka, and Redis, handling 100M+ events/day with 99.9% uptime.",
+                "Reduced API latency by 40% through MySQL/MongoDB query optimization, strategic indexing, and Redis caching.",
+                "Optimized MySQL and MongoDB queries through indexing, async processing, and cache-aside patterns, improving throughput under peak load.",
+                "Built secure backend services with OAuth 2.0 and SSO, ensuring authenticated access and data isolation for enterprise clients.",
+                "Deployed containerized services with Docker and CI/CD on AWS, achieving 3× faster releases with 99.9% uptime.",
+                "Migrated rule-based backend flows to LLM-powered services, cutting maintenance overhead by 50%."
+            ]
+        },
+        {
+            "company": "Cognizant",
+            "jobTitle": "Program Trainee Analyst",
+            "date": "Mar 2021 - Aug 2021",
+            "descriptions": [
+                "Developed RESTful APIs using Java Spring Boot for a banking platform serving 10K+ users, reducing query response time by 40% through optimized MySQL data access layers.",
+                "Migrated monolithic services to microservices architecture, improving scalability and developer velocity by 30%, while achieving 80%+ test coverage with TDD practices."
+            ]
+        },
+        {
+            "company": "Achiwer",
+            "jobTitle": "Software Engineer - Intern",
+            "date": "Apr 2019 - Oct 2019",
+            "descriptions": [
+                "Built backend services for a learning marketplace using Node.js and Python, designing REST APIs for authentication, payments, and content delivery serving 1,000+ users.",
+                "Structured MySQL and MongoDB databases for user profiles, subscriptions, and course assets, deployed on AWS EC2/S3, reducing hosting costs by 25%."
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "school": "California State University - San Bernardino, California",
+            "degree": "Masters in Computer Science",
+            "date": "Aug 2023 - May 2025",
+            "gpa": "3.8",
+            "descriptions": [
+                "Course Works - Artificial Intelligence, Theory of Algorithms, Modern Computer Architecture, Software Engineering, Operating Systems"
+            ]
+        },
+        {
+            "school": "Amrita Vishwa Vidyapeetham, Coimbatore, India",
+            "degree": "Bachelors in Computer Science",
+            "date": "Jul 2017 - May 2021",
+            "gpa": "3.1",
+            "descriptions": [
+                "Course Works - Data Structures & Algorithms, Object Oriented Programming, Computer Networks, Big Data, Operating Systems"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "project": "Async Audio Pipeline",
+            "date": "Nov 2025 - Dec 2025",
+            "githubUrl": "github.com/Manishrdy/async-audio-pipeline",
+            "descriptions": [
+                "Designed an end-to-end distributed backend architecture using FastAPI, Redis queues, and async workers to support fault-tolerant, non-blocking audio processing.",
+                "Implemented a queue-driven, multi-stage pipeline (ingestion -> transcription -> summarization) with clear service boundaries, improving throughput by 3×.",
+                "Built speaker-level segmentation, action items, MOM, and decision extraction, reducing manual meeting review time by 80%.",
+                "Applied caching, rate limiting, retries, and idempotent processing to handle partial failures and protect downstream AI services under concurrent load."
+            ]
+        },
+        {
+            "project": "SimCricketX – Real-Time Simulation Backend",
+            "date": "May 2025 - August 2025",
+            "githubUrl": "github.com/Manishrdy/SimCricketX",
+            "descriptions": [
+                "Built a real-time, multi-user backend system with Flask and REST APIs, managing concurrent simulations with consistent state handling.",
+                "Designed event processing using data-driven orchestration, reducing hard-coded business logic by 50%."
+            ]
+        },
+        {
+            "project": "Resume Tailoring Extension (Open Source)",
+            "date": "Dec 2025 - Present",
+            "githubUrl": "github.com/Manishrdy/resume_tailoring_extension",
+            "descriptions": [
+                "Architected a FastAPI backend integrating Google Gemini AI for resume optimization, delivering ATS scoring (0-100) and keyword matching in under 15 seconds.",
+                "Built PDF generation service using Next.js and TypeScript, reducing resume formatting time by 80% with professional ATS-friendly templates.",
+                "Designed REST APIs supporting job scraping from 5+ platforms (LinkedIn, Indeed, Greenhouse), achieving 90%+ test coverage with pytest."
+            ]
+        },
+        {
+            "project": "High-Performance URL Shortener",
+            "date": "Apr 2025 - May 2025",
+            "githubUrl": "github.com/Manishrdy/url_shortener",
+            "descriptions": [
+                "Developed a scalable URL shortener using Node.js, MongoDB, and Redis, handling high read/write traffic with low latency.",
+                "Implemented Redis caching and optimized lookup paths, reducing database reads by 70% and improving redirect latency by 60%.",
+                "Containerized the service with Docker, enabling fast local setup and reliable deployments."
+            ]
+        }
+    ],
+    "skills": {
+        "Frameworks & API": [
+            "FastAPI",
+            "Flask",
+            "Django",
+            "Express.js",
+            "REST",
+            "GraphQL",
+            "gRPC"
+        ],
+        "Databases & Messaging": [
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB",
+            "Redis",
+            "Apache Kafka"
+        ],
+        "AI & NLP": [
+            "LLMs",
+            "RAG Pipelines",
+            "LangChain",
+            "Prompt Engineering"
+        ],
+        "DevOps & Cloud Platforms": [
+            "AWS (EC2, S3, CloudWatch)",
+            "Docker",
+            "CI/CD (GitHub Actions, Jenkins)"
+        ]
+    },
+    "custom": {
+        "descriptions": []
+    }
+}

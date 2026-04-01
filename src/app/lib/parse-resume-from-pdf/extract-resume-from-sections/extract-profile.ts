@@ -152,6 +152,10 @@ export const extractProfile = (sections: ResumeSectionToLines) => {
     undefined,
     true
   );
+  const website =
+    url && !/linkedin\.com|github\.com/i.test(url) ? url : "";
+  const linkedin = /linkedin\.com/i.test(url) ? url : "";
+  const github = /github\.com/i.test(url) ? url : "";
 
   const summaryLines = getSectionLinesByKeywords(sections, ["summary"]);
   const summarySection = summaryLines
@@ -170,7 +174,9 @@ export const extractProfile = (sections: ResumeSectionToLines) => {
       email,
       phone,
       location,
-      url,
+      website,
+      linkedin,
+      github,
       // Dedicated section takes higher precedence over profile summary
       summary: summarySection || objectiveSection || summary,
     },

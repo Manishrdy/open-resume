@@ -47,7 +47,7 @@ export const ResumePDFEducation = ({
                 <ResumePDFText>{date}</ResumePDFText>
               </View>
               {showDescriptions && (
-                <View style={{ ...styles.flexCol, marginTop: spacing["1.5"] }}>
+                <View style={{ ...styles.flexCol, marginTop: spacing["0.5"] }}>
                   <ResumePDFBulletList
                     items={descriptions}
                     showBulletPoints={showBulletPoints}

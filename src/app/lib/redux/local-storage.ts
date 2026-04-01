@@ -14,12 +14,14 @@ export const loadStateFromLocalStorage = () => {
   }
 };
 
-export const saveStateToLocalStorage = (state: RootState) => {
+export const saveStateToLocalStorage = (state: RootState): boolean => {
   try {
     const stringifiedState = JSON.stringify(state);
     localStorage.setItem(LOCAL_STORAGE_KEY, stringifiedState);
+    return true;
   } catch (e) {
-    // Ignore
+    console.error("Failed to save state to localStorage:", e);
+    return false;
   }
 };
 
